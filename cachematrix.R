@@ -1,8 +1,7 @@
-## Put comments here that give an overall description of what your
-## functions do
+## This R script allows for creation of a matrix. The  
+## matrix can then be used to compute and cache its inverse
 
-## Write a short comment describing this function
-
+## Create a matrix obect that can cache its inverse
 makeCacheMatrix <- function(x = matrix()) {
  m <- NULL
  set <- function(y){
@@ -18,8 +17,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
-
+## Compute the inverse of the matrix returned by makeCacheMatrix.
+## If the original matrix inverse exists, the cached inverse is returned.
+## Note: changing the original matrix will return a new cached inverse.
 cacheSolve <- function(x, ...) {
   ## Return a matrix that is the inverse of 'x'
   m <- x$getinverse()
